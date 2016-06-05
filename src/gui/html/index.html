@@ -398,50 +398,57 @@
                 entry-animation="fade-in-animation"
                 exit-animation="fade-out-animation">
     <h2>Settings</h2>
+    <paper-tabs id="settingsTabs" selected="generalSettings" attr-for-selected="data-id">
+      <paper-tab data-id="generalSettings">General</paper-tab>
+      <paper-tab data-id="gameSettings">Games</paper-tab>
+    </paper-tabs>
     <paper-dialog-scrollable>
-      <div>
-        <div>
-          <div>Default Game</div>
-          <loot-dropdown-menu id="defaultGameSelect" no-label-float>
+      <iron-pages selected="generalSettings" attr-for-selected="id">
+        <section id="generalSettings">
+          <loot-dropdown-menu id="defaultGameSelect" label="Default game">
             <paper-item value="auto">Autodetect</paper-item>
             <!-- Game <option> elements go here. -->
           </loot-dropdown-menu>
-        </div>
-        <div>
-          <span id="languageLabel">Language</span>
-          <paper-tooltip for="languageLabel">Language changes will be applied after LOOT is restarted.</paper-tooltip>
-          <loot-dropdown-menu id="languageSelect" no-label-float>
+          <loot-dropdown-menu id="languageSelect" label="Language">
             <!-- Language <option> elements go here. -->
           </loot-dropdown-menu>
-        </div>
-        <div>
-          <div>Enable debug logging</div>
-          <paper-toggle-button id="enableDebugLogging"></paper-toggle-button>
-          <paper-tooltip>The output is logged to the LOOTDebugLog.txt file.</paper-tooltip>
-        </div>
-        <div>
-          <div>Update masterlist before sorting</div>
-          <paper-toggle-button id="updateMasterlist"></paper-toggle-button>
-        </div>
-      </div>
-      <table is="editable-table" id="gameTable" data-template="gameRow">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Base Game</th>
-            <th>LOOT Folder</th>
-            <th>Master File</th>
-            <th>Masterlist Repository URL</th>
-            <th>Masterlist Repository Branch</th>
-            <th>Install Path</th>
-            <th>Install Path Registry Key</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Game rows go here. -->
-        </tbody>
-      </table>
+          <paper-toggle-button id="enableDebugLogging">Enable debug logging</paper-toggle-button>
+          <paper-toggle-button id="updateMasterlist">Update masterlist before sorting</paper-toggle-button>
+          <p><span id="languageLabel">Language changes will be applied after LOOT is restarted.</span> <span>The debug log is written to the LOOTDebugLog.txt file.</span></p>
+        </section>
+        <section id="gameSettings">
+          <section>
+            <paper-listbox id="settingsGameList">
+              <template is="dom-repeat">
+                <paper-item value="[[item.folder]]">
+                  <paper-item-body>[[item.name]]</paper-item-body>
+                  <paper-icon-button icon="delete" suffix></paper-icon-button>
+                </paper-item>
+              </template>
+            </paper-listbox>
+            <div id="addGame">
+              <paper-input label="Add game" placeholder="Game name"></paper-input>
+              <paper-button>Add</paper-button>
+            </div>
+          </section>
+          <section>
+            <div>
+              <paper-input label="Name" error-message="A name is required." class="name" required auto-validate></paper-input>
+              <loot-dropdown-menu label="Base game" class="type">
+                <!-- Game <option> elements go here. -->
+              </loot-dropdown-menu>
+              <paper-input label="LOOT folder" error-message="A folder is required." class="folder" required auto-validate></paper-input>
+              <paper-input label="Master file" class="master"></paper-input>
+            </div>
+            <div>
+              <paper-input label="Masterlist repository URL" class="repo"></paper-input>
+              <paper-input label="Masterlist repository branch" class="branch"></paper-input>
+              <paper-input label="Install path" class="path"></paper-input>
+              <paper-input label="Install path Registry key" class="registry"></paper-input>
+            </div>
+          </section>
+        </section>
+      </iron-pages>
     </paper-dialog-scrollable>
     <div class="buttons">
       <paper-button class="cancel" dialog-dismiss>Cancel</paper-button>

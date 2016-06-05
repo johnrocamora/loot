@@ -231,32 +231,28 @@
     document.getElementById('settingsDialog').querySelector('h2').textContent = l10n.translate('Settings');
 
     const defaultGameSelect = document.getElementById('defaultGameSelect');
-    defaultGameSelect.previousElementSibling.textContent = l10n.translate('Default Game');
+    defaultGameSelect.setAttribute('label', l10n.translate('Default Game'));
     defaultGameSelect.firstElementChild.textContent = l10n.translate('Autodetect');
     /* The selected text doesn't update, so force that translation. */
     defaultGameSelect.shadowRoot.querySelector('paper-dropdown-menu').shadowRoot.querySelector('paper-input').value = defaultGameSelect.shadowRoot.querySelector('paper-dropdown-menu').selectedItem.textContent;
 
-    document.getElementById('languageLabel').textContent = l10n.translate('Language');
-    document.getElementById('languageLabel').nextElementSibling.textContent = l10n.translate('Language changes will be applied after LOOT is restarted.');
+    document.getElementById('languageSelect').setAttribute('label', l10n.translate('Language'));
+    document.getElementById('languageLabel').textContent = l10n.translate('Language changes will be applied after LOOT is restarted.');
 
-    document.getElementById('enableDebugLogging').previousElementSibling.textContent = l10n.translate('Enable debug logging');
-    document.getElementById('enableDebugLogging').nextElementSibling.textContent = l10n.translate('The output is logged to the LOOTDebugLog.txt file.');
+    document.getElementById('enableDebugLogging').textContent = l10n.translate('Enable debug logging');
+    document.getElementById('languageLabel').nextElementSibling.textContent = l10n.translate('The output is logged to the LOOTDebugLog.txt file.');
 
-    document.getElementById('updateMasterlist').previousElementSibling.textContent = l10n.translate('Update masterlist before sorting');
+    document.getElementById('updateMasterlist').textContent = l10n.translate('Update masterlist before sorting');
 
-    const gameTable = document.getElementById('gameTable');
-    gameTable.querySelector('th:first-child').textContent = l10n.translate('Name');
-    gameTable.querySelector('th:nth-child(2)').textContent = l10n.translate('Base Game');
-    gameTable.querySelector('th:nth-child(3)').textContent = l10n.translate('LOOT Folder');
-    gameTable.querySelector('th:nth-child(4)').textContent = l10n.translate('Master File');
-    gameTable.querySelector('th:nth-child(5)').textContent = l10n.translate('Masterlist Repository URL');
-    gameTable.querySelector('th:nth-child(6)').textContent = l10n.translate('Masterlist Repository Branch');
-    gameTable.querySelector('th:nth-child(7)').textContent = l10n.translate('Install Path');
-    gameTable.querySelector('th:nth-child(8)').textContent = l10n.translate('Install Path Registry Key');
-
-    /* As the game table is attached on launch, its "Add New Row"
-       tooltip doesn't benefit from the template translation above. */
-    gameTable.querySelector('tr:last-child paper-tooltip').textContent = l10n.translate('Add New Row');
+    const gameSettings = document.getElementById('gameSettings');
+    gameSettings.querySelector('.name').setAttribute('label', l10n.translate('Name'));
+    gameSettings.querySelector('.type').setAttribute('label', l10n.translate('Base Game'));
+    gameSettings.querySelector('.folder').setAttribute('label', l10n.translate('LOOT Folder'));
+    gameSettings.querySelector('.master').setAttribute('label', l10n.translate('Master File'));
+    gameSettings.querySelector('.repo').setAttribute('label', l10n.translate('Masterlist Repository URL'));
+    gameSettings.querySelector('.branch').setAttribute('label', l10n.translate('Masterlist Repository Branch'));
+    gameSettings.querySelector('.path').setAttribute('label', l10n.translate('Install Path'));
+    gameSettings.querySelector('.registry').setAttribute('label', l10n.translate('Install Path Registry Key'));
 
     document.getElementById('settingsDialog').getElementsByClassName('accept')[0].textContent = l10n.translate('Apply');
     document.getElementById('settingsDialog').getElementsByClassName('cancel')[0].textContent = l10n.translate('Cancel');

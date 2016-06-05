@@ -81,7 +81,7 @@
     /* Set up event handlers for settings dialog. */
     const settings = document.getElementById('settingsDialog');
     settings.addEventListener('iron-overlay-closed', onCloseSettingsDialog);
-    settings.querySelector('[dialog-confirm]').addEventListener('tap', onApplySettings);
+    document.getElementById('settingsTabs').addEventListener('iron-select', onSwitchTab);
 
     /* Set up handler for opening and closing editors. */
     document.body.addEventListener('loot-editor-open', onEditorOpen);

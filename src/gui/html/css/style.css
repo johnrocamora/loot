@@ -150,18 +150,39 @@ li.warn {
 #about blockquote {
     white-space: pre-line;
 }
-#settingsDialog > paper-dialog-scrollable > div > * {
+#settingsDialog {
+  width: 750px;
+}
+#settingsTabs {
+  margin-top: 0;
+}
+#settingsDialog > paper-dialog-scrollable {
+  margin-top: 0;
+}
+#generalSettings > * {
     margin: 16px;
 }
-#settingsDialog > paper-dialog-scrollable > div > div > :first-child {
-    margin-right: 16px;
-    margin-left: 0;
+#generalSettings > loot-dropdown-menu {
+  display: block;
 }
-#settingsDialog > paper-dialog-scrollable > div > :last-child {
-    margin-right: 0;
+#gameSettings,
+#gameSettings > section {
+  display: flex;
 }
-#gameTable {
-    margin: 32px 0 0;
+#gameSettings > section:first-child {
+  flex-direction: column;
+  border-right: 1px rgba(0, 0, 0, 0.12) solid;
+}
+#settingsGameList {
+  flex-grow: 1;
+}
+#gameSettings > section:last-child > div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#addGame {
+  display: flex;
+  align-items: flex-end;
 }
 #progressDialog paper-progress {
     width: 100%;
