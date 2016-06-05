@@ -274,7 +274,7 @@ function onQuit() {
   }
 }
 
-function onSwitchSidebarTab(evt) {
+function onSwitchTab(evt) {
   document.getElementById(evt.target.selected).parentElement.selected = evt.target.selected;
 }
 function onSidebarClick(evt) {

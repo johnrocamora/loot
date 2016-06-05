@@ -68,7 +68,7 @@
     document.getElementById('sortButton').addEventListener('click', onSortPlugins);
     document.getElementById('applySortButton').addEventListener('click', onApplySort);
     document.getElementById('cancelSortButton').addEventListener('click', onCancelSort);
-    document.getElementById('sidebarTabs').addEventListener('iron-select', onSwitchSidebarTab);
+    document.getElementById('sidebarTabs').addEventListener('iron-select', onSwitchTab);
     document.getElementById('jumpToGeneralInfo').addEventListener('click', onJumpToGeneralInfo);
 
     /* Set up search event handlers. */
