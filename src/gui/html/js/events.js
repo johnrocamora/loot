@@ -294,14 +294,32 @@ function onSidebarClick(evt) {
   }
 }
 
-function areSettingsValid() {
-  return document.getElementById('gameTable').validate();
+function areGameSettingsFieldsValid() {
+
 }
-function onApplySettings(evt) {
-  if (!areSettingsValid()) {
-    evt.stopPropagation();
+function initialiseGameSettingsFields(gameSettings) {
+
+}
+function getGameSettingsFromFields() {
+
+}
+function onSettingsGameSelect(evt) {
+  if (!areGameSettingsValid()) {
+    return;
   }
+
+  const targetGameFolder = evt.target.getAttribute('value');
+  const settings = loot.settings.games.find(game => game.folder === targetGameFolder);
+  initialiseGameSettingsFields(settings);
 }
+function onAddGame(evt) {
+
+  initialiseGameSettingsFields({});
+}
+function onDeleteGame() {
+
+}
+
 function onCloseSettingsDialog(evt) {
   if (evt.target.id !== 'settingsDialog') {
     /* The event can be fired by dropdowns in the settings dialog, so ignore
