@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LOOT 0.9.2\n"
 "Report-Msgid-Bugs-To: https://github.com/loot/loot/issues\n"
-"POT-Creation-Date: 2016-09-12 19:42+0100\n"
+"POT-Creation-Date: 2016-09-12 19:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,60 +21,60 @@ msgstr ""
 msgid "Identifying conflicting plugins..."
 msgstr ""
 
-#: src/gui/html/js/events.js:98
+#: src/gui/html/js/events.js:99
 msgid "No masterlist update was necessary."
 msgstr ""
 
-#: src/gui/html/js/events.js:148
+#: src/gui/html/js/events.js:149
 msgid "Sorting made no changes to the load order."
 msgstr ""
 
-#: src/gui/html/js/events.js:180
+#: src/gui/html/js/events.js:181
 msgid "Redate Plugins?"
 msgstr ""
 
-#: src/gui/html/js/events.js:180
+#: src/gui/html/js/events.js:181
 msgid ""
 "This feature is provided so that modders using the Creation Kit may set the "
 "load order it uses. A side-effect is that any subscribed Steam Workshop mods "
 "will be re-downloaded by Steam. Do you wish to continue?"
 msgstr ""
 
-#: src/gui/html/js/events.js:180
+#: src/gui/html/js/events.js:181
 msgid "Redate"
 msgstr ""
 
-#: src/gui/html/js/events.js:189
+#: src/gui/html/js/events.js:190
 msgid ""
 "Are you sure you want to clear all existing user-added metadata from all "
 "plugins?"
 msgstr ""
 
-#: src/gui/html/js/events.js:189 src/gui/html/js/events.js:397
+#: src/gui/html/js/events.js:190 src/gui/html/js/events.js:398
 msgid "Clear"
 msgstr ""
 
-#: src/gui/html/js/events.js:200
+#: src/gui/html/js/events.js:201
 msgid "All user-added metadata has been cleared."
 msgstr ""
 
-#: src/gui/html/js/events.js:223
+#: src/gui/html/js/events.js:224
 msgid "LOOT's content has been copied to the clipboard."
 msgstr ""
 
-#: src/gui/html/js/events.js:234
+#: src/gui/html/js/events.js:235
 msgid "The load order has been copied to the clipboard."
 msgstr ""
 
-#: src/gui/html/js/events.js:265 src/gui/html/js/translateStaticText.js:195
+#: src/gui/html/js/events.js:266 src/gui/html/js/translateStaticText.js:195
 msgid "Quit"
 msgstr ""
 
-#: src/gui/html/js/events.js:277
+#: src/gui/html/js/events.js:278
 msgid "sorted load order"
 msgstr ""
 
-#: src/gui/html/js/events.js:279
+#: src/gui/html/js/events.js:280
 msgid "metadata edits"
 msgstr ""
 
@@ -86,7 +86,7 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: src/gui/html/js/handlePromiseError.js:15
+#: src/gui/html/js/handlePromiseError.js:20
 #: src/gui/html/js/translateStaticText.js:115
 msgid "Error"
 msgstr ""
