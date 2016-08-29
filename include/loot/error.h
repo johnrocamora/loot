@@ -109,6 +109,8 @@ public:
     windows_error = 13,
     /** An error occurred while trying to sort the load order. */
     sorting_error = 14,
+    /** An operation was cancelled. */
+    operation_cancelled = 15,
   };
 
   /**

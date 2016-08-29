@@ -25,6 +25,8 @@ along with LOOT.  If not, see
 #ifndef LOOT_GUI_QUERY_QUERY
 #define LOOT_GUI_QUERY_QUERY
 
+#include <mutex>
+
 #include <boost/log/trivial.hpp>
 #include <include/wrapper/cef_message_router.h>
 
@@ -33,16 +35,34 @@ along with LOOT.  If not, see
 namespace loot {
 class Query : public CefBase {
 public:
+  Query() : cancelled_(false) {}
+
   void execute(CefRefPtr<CefMessageRouterBrowserSide::Callback> callback) {
     try {
       callback->Success(executeLogic());
     } catch (Error &e) {
-      BOOST_LOG_TRIVIAL(error) << e.what();
-      callback->Failure(e.codeAsUnsignedInt(), e.what());
+      if (e.code() == Error::Code::operation_cancelled) {
+        BOOST_LOG_TRIVIAL(info) << e.what();
+      } else {
+        BOOST_LOG_TRIVIAL(error) << e.what();
+        callback->Failure(e.codeAsUnsignedInt(), e.what());
+      }
     } catch (std::exception &e) {
       BOOST_LOG_TRIVIAL(error) << e.what();
       callback->Failure(-1, e.what());
     }
+  }
+
+  void cancel() {
+    std::lock_guard<std::mutex> guard(mutex_);
+
+    cancelled_ = true;
+  }
+
+  bool isCancelled() const {
+    std::lock_guard<std::mutex> guard(mutex_);
+
+    return cancelled_;
   }
 
 protected:
@@ -54,6 +74,9 @@ protected:
   }
 
 private:
+  bool cancelled_;
+  mutable std::mutex mutex_;
+
   IMPLEMENT_REFCOUNTING(Query);
 };
 }
