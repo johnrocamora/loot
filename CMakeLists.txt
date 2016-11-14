@@ -116,7 +116,7 @@ ExternalProject_Add(testing-plugins
 ExternalProject_Add(yaml-cpp
                     PREFIX "external"
                     URL "https://github.com/WrinklyNinja/yaml-cpp/archive/patched-for-loot.tar.gz"
-                    CMAKE_ARGS -DMSVC_SHARED_RT=${MSVC_SHARED_RUNTIME}
+                    CMAKE_ARGS -DMSVC_SHARED_RT=${MSVC_SHARED_RUNTIME} -DCMAKE_CXX_FLAGS=-fPIC
                     BUILD_COMMAND ${CMAKE_COMMAND} --build . --target yaml-cpp --config $(CONFIGURATION)
                     INSTALL_COMMAND "")
 ExternalProject_Get_Property(yaml-cpp SOURCE_DIR BINARY_DIR)
