@@ -72,7 +72,7 @@ set (LIBESPM_INCLUDE_DIRS "${SOURCE_DIR}/include")
 ExternalProject_Add(libgit2
                     PREFIX "external"
                     URL "https://github.com/libgit2/libgit2/archive/v0.24.3.tar.gz"
-                    CMAKE_ARGS -DBUILD_SHARED_LIBS=OFF -DBUILD_CLAR=OFF -DSTATIC_CRT=${MSVC_STATIC_RUNTIME}
+                    CMAKE_ARGS -DBUILD_SHARED_LIBS=OFF -DBUILD_CLAR=OFF -DSTATIC_CRT=${MSVC_STATIC_RUNTIME} -DCMAKE_C_FLAGS=-fPIC
                     BUILD_COMMAND ${CMAKE_COMMAND} --build . --target git2 --config $(CONFIGURATION)
                     INSTALL_COMMAND "")
 ExternalProject_Get_Property(libgit2 SOURCE_DIR BINARY_DIR)
@@ -380,8 +380,8 @@ ENDIF ()
 IF (CMAKE_COMPILER_IS_GNUCXX)
     set (CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_RPATH};.")
     set (CMAKE_BUILD_WITH_INSTALL_RPATH ON)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -std=c++14")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++14")
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -std=c++14 -fPIC")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++14 -fPIC")
 
     set (LOOT_LIBS ssl
                    curl
