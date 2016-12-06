@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: LOOT\n"
 "Report-Msgid-Bugs-To: https://github.com/loot/loot/issues\n"
 "POT-Creation-Date: 2016-12-05 22:22+0500\n"
-"PO-Revision-Date: 2016-12-06 09:41+0500\n"
+"PO-Revision-Date: 2016-12-06 09:47+0500\n"
 "Last-Translator: Tokc.D.K. <tokcdk@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -92,8 +92,7 @@ msgstr "Порядок загрузки был скопирован в буфе�
 #, javascript-format
 msgid ""
 "You have not yet applied or cancelled your %s. Are you sure you want to quit?"
-msgstr ""
-"Операция \"%s\" все еще не применена\\отменена. Действительно хотите выйти?"
+msgstr "Вы все еще не применили или не отменили %s. Действительно хотите выйти?"
 
 #: src/gui/html/js/events.js:267 src/gui/html/js/translateStaticText.js:214
 msgid "Quit"
@@ -101,11 +100,11 @@ msgstr "Выход"
 
 #: src/gui/html/js/events.js:279
 msgid "sorted load order"
-msgstr "Отсортированный порядок загрузки"
+msgstr "отсортированный порядок загрузки"
 
 #: src/gui/html/js/events.js:281
 msgid "metadata edits"
-msgstr "Правки метаданных"
+msgstr "правки метаданных"
 
 #: src/gui/html/js/events.js:395
 #, javascript-format
