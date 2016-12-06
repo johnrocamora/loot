@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: LOOT\n"
 "Report-Msgid-Bugs-To: https://github.com/loot/loot/issues\n"
 "POT-Creation-Date: 2016-12-05 22:22+0500\n"
-"PO-Revision-Date: 2016-12-06 09:47+0500\n"
+"PO-Revision-Date: 2016-12-06 10:31+0500\n"
 "Last-Translator: Tokc.D.K. <tokcdk@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -458,15 +458,16 @@ msgstr "Фильтры"
 
 #: src/gui/html/js/translateStaticText.js:224
 msgid "Press Enter or click outside the input to set the filter."
-msgstr "Для установки фильтра нажмите Ввод или кликните за пределами ввода."
+msgstr ""
+"Нажмите клавишу Ввод или кликните по по свободному месту, чтобы применить фильтр."
 
 #: src/gui/html/js/translateStaticText.js:225
 msgid "Show only plugins with cards that contain"
-msgstr "Показать только плагины с карточками который содержат"
+msgstr "Показать только плагины, имя которых содержит содержит"
 
 #: src/gui/html/js/translateStaticText.js:226
 msgid "No text specified"
-msgstr "Нет определенного текста"
+msgstr "Текст не определен"
 
 #: src/gui/html/js/translateStaticText.js:229
 msgid "Hide version numbers"
@@ -502,11 +503,11 @@ msgstr "Скрыть плагины без сообщений"
 
 #: src/gui/html/js/translateStaticText.js:239
 msgid "Show only conflicting plugins for"
-msgstr "Показать только конфликтующие плагины для"
+msgstr "Показать конфликтующие плагины только для"
 
 #: src/gui/html/js/translateStaticText.js:240
 msgid "No plugin selected"
-msgstr "Нет выбраного плагина"
+msgstr "Плагин не выбран"
 
 #: src/gui/html/js/translateStaticText.js:244
 msgid "Hidden plugins:"
@@ -530,11 +531,11 @@ msgstr "Дата мастерлиста"
 
 #: src/gui/html/js/translateStaticText.js:253
 msgid "Warnings"
-msgstr "Предупреждения"
+msgstr "Предупреждений"
 
 #: src/gui/html/js/translateStaticText.js:254
 msgid "Errors"
-msgstr "Ошибки"
+msgstr "Ошибок"
 
 #: src/gui/html/js/translateStaticText.js:255
 msgid "Total Messages"
@@ -578,7 +579,7 @@ msgstr "Обновить мастерлист перед сортировкой"
 
 #: src/gui/html/js/translateStaticText.js:281
 msgid "Base Game"
-msgstr "Основная игра"
+msgstr "Игра"
 
 #: src/gui/html/js/translateStaticText.js:282
 msgid "LOOT Folder"
@@ -704,7 +705,7 @@ msgstr "\"%1%\" включает выражение, которое не мож�
 
 #: src/gui/query/sort_plugins_query.h:48
 msgid "Loading plugin contents..."
-msgstr "Загрузка содержимого плагина."
+msgstr "Загрузка содержимого плагинов..."
 
 #: src/gui/query/sort_plugins_query.h:75
 msgid "Sorting load order..."
@@ -835,21 +836,21 @@ msgid "%1% ITM record"
 msgid_plural "%1% ITM records"
 msgstr[0] "%1% ITM-запись"
 msgstr[1] "%1% ITM-записей"
-msgstr[2] ""
+msgstr[2] "%1% ITM-записей"
 
 #: src/backend/metadata/plugin_cleaning_data.cpp:90
 msgid "%1% deleted reference"
 msgid_plural "%1% deleted references"
 msgstr[0] "%1% удаленную ссылку"
 msgstr[1] "%1% удаленных ссылок"
-msgstr[2] ""
+msgstr[2] "%1% удаленных ссылок"
 
 #: src/backend/metadata/plugin_cleaning_data.cpp:91
 msgid "%1% deleted navmesh"
 msgid_plural "%1% deleted navmeshes"
 msgstr[0] "%1% удаленный navmesh"
 msgstr[1] "%1% удаленных navmesh-ей"
-msgstr[2] ""
+msgstr[2] "%1% удаленных navmesh-ей"
 
 #: src/backend/metadata/plugin_cleaning_data.cpp:95
 msgid "%1% found %2%, %3% and %4%."
